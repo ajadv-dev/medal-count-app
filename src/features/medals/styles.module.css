@@ -1,7 +1,6 @@
 .flag {
     width: 28px;
     height: 17px;
-    background-image: url('/flags.png');
     background-repeat: no-repeat;
     background-size: auto;
     display: inline-block;
