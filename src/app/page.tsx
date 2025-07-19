@@ -1,15 +1,16 @@
 import styles from "./page.module.css";
-import {SortType} from "@/services/medals/types";
-import {MedalsTable} from "@/features/medals/components/MedalsTable";
+import {Leaderboard} from "@/features/medals/components/Leaderboard";
+import {Suspense} from "react";
 
-export default function Home({ searchParams }: { searchParams?: { sort?: string } }) {
-  const sort = searchParams?.sort as SortType ?? SortType.GOLD;
 
+export default async function Page() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
         <h1>Olympics Games Leaderboards</h1>
-        <MedalsTable sort={sort} />
+          <Suspense fallback={<p>Loading leaderboard...</p>}>
+              <Leaderboard />
+          </Suspense>
       </main>
     </div>
   );
