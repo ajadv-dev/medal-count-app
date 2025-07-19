@@ -1,0 +1,1 @@
+export const medalsApiUrl = `${process.env.NEXT_PUBLIC_BASE_PATH}/mock/medals.json`;

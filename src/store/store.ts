@@ -1,11 +1,11 @@
 import {configureStore} from "@reduxjs/toolkit";
-import {medalsAPI} from "@/services/medals/medalsApi";
+import {medalsService} from "@/services/medals/medalsService";
 
 export const store = configureStore({
     reducer: {
-        [medalsAPI.reducerPath]: medalsAPI.reducer,
+        [medalsService.reducerPath]: medalsService.reducer,
     },
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(medalsAPI.middleware),
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(medalsService.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;

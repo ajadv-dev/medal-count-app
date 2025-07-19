@@ -1,15 +1,16 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import {CountryMedals} from "@/services/medals/types";
+import {medalsApiUrl} from "@/services/api";
 
-export const medalsAPI = createApi({
-    reducerPath: 'medalsAPI',
+export const medalsService = createApi({
+    reducerPath: 'medalsService',
     baseQuery: fetchBaseQuery({ baseUrl: '/' }),
     endpoints: (builder) => ({
         getMedals: builder.query<CountryMedals[], void>({
-            query: () => '/mock/medals.json',
+            query: () => medalsApiUrl,
         }),
     }),
 });
 
 
-export const { useGetMedalsQuery } = medalsAPI;
+export const { useGetMedalsQuery } = medalsService;

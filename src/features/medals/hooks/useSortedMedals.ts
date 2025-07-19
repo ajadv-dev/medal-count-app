@@ -1,5 +1,5 @@
 import {SortType} from "@/services/medals/types";
-import {useGetMedalsQuery} from "@/services/medals/medalsApi";
+import {useGetMedalsQuery} from "@/services/medals/medalsService";
 import {useMemo} from "react";
 import {sortMedals} from "@/features/medals/utils";
 
