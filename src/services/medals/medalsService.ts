@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import {CountryMedals} from "@/services/medals/types";
-import {medalsApiUrl} from "@/services/api";
+import {medalsApiUrl} from "@/api/consts";
 
 export const medalsService = createApi({
     reducerPath: 'medalsService',
